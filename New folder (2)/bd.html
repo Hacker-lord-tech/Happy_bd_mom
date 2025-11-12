@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mom! - 12/11/2025</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Great+Vibes&family=Caveat:wght@700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Segoe UI', sans-serif;
+            color: #fff;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+            padding: 30px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+            to { text-shadow: 0 0 40px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 107, 107, 0.6); }
+        }
+
+        .subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            margin: 15px 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .date {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            margin: 20px 0;
+            color: #ffeaa7;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+        }
+
+        .message {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .love {
+            font-family: 'Pacifico', cursive;
+            font-size: 2rem;
+            margin-top: 25px;
+            color: #ff6b6b;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        /* Fireworks */
+        .firework {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: firework 1.5s ease-out forwards;
+        }
+
+        @keyframes firework {
+            0% { transform: scale(0); opacity: 1; }
+            50% { transform: scale(3); opacity: 1; }
+            100% { transform: scale(0); opacity: 0; }
+        }
+
+        /* Confetti */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #f00;
+            pointer-events: none;
+            animation: confetti-fall linear forwards;
+        }
+
+        @keyframes confetti-fall {
+            to {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Real Balloons (SVG) */
+        .balloon {
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            pointer-events: none;
+            animation: float-up 10s linear infinite;
+            filter: drop-shadow(0 0 8px rgba(0,0,0,0.3));
+        }
+
+        .balloon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        @keyframes float-up {
+            0% { 
+                transform: translateY(120vh) translateX(0) rotate(0deg); 
+                opacity: 0;
+            }
+            10% { opacity: 1; }
+            100% { 
+                transform: translateY(-150px) translateX(var(--drift)) rotate(360deg); 
+                opacity: 0;
+            }
+        }
+
+        /* Sparkles */
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkle 1.5s linear infinite;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1); opacity: 1; }
+        }
+
+        .cake {
+            font-size: 5rem;
+            margin: 30px 0;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday Mom!</h1>
+    
+        <div class="date">November 12, 2025</div>
+        
+        <div class="message">
+            <p>Dear Mom,</p>
+            <p>Today is your special day, and I want the whole world to know how much you mean to me. You are the heart of our family, the light in every room, and the reason I smile every day.</p>
+            <p>You've given me love, wisdom, and endless support. Your hugs heal everything, your smile brightens the darkest days, and your strength inspires me always.</p>
+            <p>May this birthday bring you as much joy as you bring to everyone around you. May your year be filled with love, laughter, health, and all your dreams coming true.</p>
+            <p>I love you more than words can say. Forever and always.</p>
+        </div>
+
+        <div class="cake">Birthday Cake</div>
+
+        <div class="love">With all my love, forever</div>
+    </div>
+
+    <footer>Made with infinite love for the best mom in the world</footer>
+
+    <script>
+        // SVG Balloon Template
+        const balloonSVG = `
+            <svg viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ff9a9e; stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#fad0c4; stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#a1c4fd; stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#c2e9fb; stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ff6b6b; stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#feca57; stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#48dbfb; stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#ff9ff3; stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <path d="M50 10 
+                         C30 10, 15 25, 15 45
+                         C15 65, 30 80, 50 100
+                         C70 80, 85 65, 85 45
+                         C85 25, 70 10, 50 10
+                         Z" fill="url(#grad{{color}})" stroke="#fff" stroke-width="2"/>
+                <path d="M50 100 Q50 110, 48 120 Q50 125, 52 120 Q50 110, 50 100" fill="#fff" stroke="#fff" stroke-width="1.5"/>
+                <path d="M48 120 Q50 125, 52 120" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>`;
+
+        const balloonColors = ['1', '2', '3', '4'];
+
+        // Fireworks
+        function createFirework() {
+            const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#a29bfe', '#fd79a8'];
+            const firework = document.createElement('div');
+            firework.className = 'firework';
+            firework.style.left = Math.random() * window.innerWidth + 'px';
+            firework.style.top = Math.random() * window.innerHeight * 0.6 + 'px';
+            firework.style.background = colors[Math.floor(Math.random() * colors.length)];
+            document.body.appendChild(firework);
+
+            setTimeout(() => firework.remove(), 1500);
+        }
+
+        // Confetti
+        function createConfetti() {
+            const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#a29bfe'];
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * window.innerWidth + 'px';
+            confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            confetti.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(confetti);
+
+            setTimeout(() => confetti.remove(), 5000);
+        }
+
+        // Real Balloon (SVG)
+        function createBalloon() {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            
+            const colorIndex = Math.floor(Math.random() * balloonColors.length);
+            const svg = balloonSVG.replace('{{color}}', balloonColors[colorIndex]);
+            
+            balloon.innerHTML = svg;
+            balloon.style.left = Math.random() * window.innerWidth + 'px';
+            balloon.style.setProperty('--drift', (Math.random() * 200 - 100) + 'px');
+            balloon.style.animationDuration = (Math.random() * 6 + 8) + 's';
+            balloon.style.animationDelay = Math.random() * 3 + 's';
+            
+            document.body.appendChild(balloon);
+
+            setTimeout(() => balloon.remove(), 15000);
+        }
+
+        // Sparkles
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * window.innerWidth + 'px';
+            sparkle.style.top = Math.random() * window.innerHeight + 'px';
+            sparkle.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(sparkle);
+
+            setTimeout(() => sparkle.remove(), 1500);
+        }
+
+        // Start effects
+        setInterval(createFirework, 800);
+        setInterval(createConfetti, 300);
+        setInterval(createBalloon, 1800);
+        setInterval(createSparkle, 400);
+
+        // Initial burst
+        for (let i = 0; i < 20; i++) {
+            setTimeout(createFirework, i * 100);
+            setTimeout(createConfetti, i * 50);
+            if (i < 10) setTimeout(createBalloon, i * 300);
+        }
+
+        // Click anywhere for extra celebration
+        document.body.addEventListener('click', () => {
+            for (let i = 0; i < 15; i++) {
+                setTimeout(createFirework, i * 50);
+                setTimeout(createSparkle, i * 100);
+                if (i < 5) setTimeout(createBalloon, i * 200);
+            }
+        });
+    </script>
+</body>
+</html>
